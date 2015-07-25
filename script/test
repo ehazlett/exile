@@ -1,0 +1,7 @@
+#!/bin/bash
+set -e
+PROJECT=exile
+
+docker build -t $PROJECT-build -f Dockerfile.build .
+
+docker run --rm -w /go/src/github.com/ehazlett/$PROJECT $PROJECT-build make test

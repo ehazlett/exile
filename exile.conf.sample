@@ -1,0 +1,47 @@
+{
+    "roots": {
+        "primary": {
+            "key": "test/certs/primary.key",
+            "certificate": "test/certs/primary.pem"
+        },
+        "secondary": {
+            "key": "test/certs/secondary.key",
+            "certificate": "test/certs/secondary.pem"
+        }
+    },
+    "signing": {
+        "default": {
+            "expiry": "8760h"
+        },
+        "profiles": {
+            "client": {
+                    "usages": [
+                            "signing",
+                            "key encipherment",
+                            "client auth"
+                    ],
+                    "expiry": "8760h"
+            },
+            "node": {
+                    "usages": [
+                            "signing",
+                            "key encipherment",
+                            "server auth",
+                            "client auth"
+                    ],
+                    "expiry": "8760h"
+            },
+            "intermediate": {
+                    "usages": [
+                            "signing",
+                            "key encipherment",
+                            "cert sign",
+                            "crl sign"
+                    ],
+                    "is_ca": true,
+                    "expiry": "8760h"
+            }
+        }
+    }
+}
+

@@ -1,0 +1,17 @@
+#!/bin/bash
+set -e
+PROJECT=exile
+TAG=${1:-}
+
+if [ -z "$TAG" ]; then
+    echo "Usage: $0 <version>"
+    echo " Example: $0 0.0.1"
+    exit 1
+fi
+
+rm -rf certm_*
+
+echo "Building $TAG"
+docker build -t $PROJECT-build -f Dockerfile.build .
+docker run --rm -e TAG -v /var/run/docker.sock:/var/run/docker.sock -v $(pwd):/go/src/github.com/ehazlett/$PROJECT -w /go/src/github.com/ehazlett/$PROJECT $PROJECT-build make TAG=$TAG build image
+docker run --rm -e TAG -v /var/run/docker.sock:/var/run/docker.sock -v $(pwd):/go/src/github.com/ehazlett/$PROJECT -w /go/src/github.com/ehazlett/$PROJECT $PROJECT-build make build-cross

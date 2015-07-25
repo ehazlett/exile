@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+PROJECT=exile
+SUMS=$PROJECT.sums
+
+if [ -e $SUMS ]; then rm $SUMS; fi
+
+for BINARY in $PROJECT_*; do
+    sha256sum $BINARY >> $SUMS
+    md5sum $BINARY >> $SUMS
+done
+
