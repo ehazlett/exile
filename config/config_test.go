@@ -26,7 +26,7 @@ func TestBaseConfig(t *testing.T) {
 	}
 
 	if len(cfg.Roots) != 1 {
-		t.Fatalf("expected 1 root; received", len(cfg.Roots))
+		t.Fatalf("expected 1 root; received %d", len(cfg.Roots))
 	}
 
 	c, ok := cfg.Roots["primary"]
