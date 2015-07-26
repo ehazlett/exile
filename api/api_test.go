@@ -6,5 +6,5 @@ import (
 
 func getTestAPI() (*API, error) {
 	log.SetLevel(log.ErrorLevel)
-	return NewAPI("")
+	return NewAPI("", nil)
 }
