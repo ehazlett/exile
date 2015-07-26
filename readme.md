@@ -2,6 +2,9 @@
 Exile provides an API for generating certificates using multiple CAs with
 Cloudflare [cfssl](https://github.com/cloudflare/cfssl).
 
+# Demo
+[![Demo](https://raw.githubusercontent.com/ehazlett/exile/master/demo.png)](https://asciinema.org/a/23977)
+
 # Usage
 Exile combines the configuration for cfssl signing along with a set of roots
 to be used for signing.  There is an example config (`exile.conf.sample`) in
