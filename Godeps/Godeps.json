@@ -8,13 +8,65 @@
 			"Rev": "f92b7950b372b1db80bd3527e4d40e42555fe6c2"
 		},
 		{
+			"ImportPath": "github.com/cloudflare/cfssl/auth",
+			"Rev": "52e88e14edf0c4213f8a00a22c7c3cf0c0f0e0b3"
+		},
+		{
+			"ImportPath": "github.com/cloudflare/cfssl/config",
+			"Rev": "52e88e14edf0c4213f8a00a22c7c3cf0c0f0e0b3"
+		},
+		{
+			"ImportPath": "github.com/cloudflare/cfssl/crypto/pkcs12",
+			"Rev": "52e88e14edf0c4213f8a00a22c7c3cf0c0f0e0b3"
+		},
+		{
+			"ImportPath": "github.com/cloudflare/cfssl/crypto/pkcs7",
+			"Rev": "52e88e14edf0c4213f8a00a22c7c3cf0c0f0e0b3"
+		},
+		{
+			"ImportPath": "github.com/cloudflare/cfssl/csr",
+			"Rev": "52e88e14edf0c4213f8a00a22c7c3cf0c0f0e0b3"
+		},
+		{
+			"ImportPath": "github.com/cloudflare/cfssl/errors",
+			"Rev": "52e88e14edf0c4213f8a00a22c7c3cf0c0f0e0b3"
+		},
+		{
+			"ImportPath": "github.com/cloudflare/cfssl/helpers",
+			"Rev": "52e88e14edf0c4213f8a00a22c7c3cf0c0f0e0b3"
+		},
+		{
+			"ImportPath": "github.com/cloudflare/cfssl/info",
+			"Rev": "52e88e14edf0c4213f8a00a22c7c3cf0c0f0e0b3"
+		},
+		{
+			"ImportPath": "github.com/cloudflare/cfssl/log",
+			"Rev": "52e88e14edf0c4213f8a00a22c7c3cf0c0f0e0b3"
+		},
+		{
+			"ImportPath": "github.com/cloudflare/cfssl/ocsp/config",
+			"Rev": "52e88e14edf0c4213f8a00a22c7c3cf0c0f0e0b3"
+		},
+		{
+			"ImportPath": "github.com/cloudflare/cfssl/signer",
+			"Rev": "52e88e14edf0c4213f8a00a22c7c3cf0c0f0e0b3"
+		},
+		{
 			"ImportPath": "github.com/codegangsta/cli",
 			"Comment": "1.2.0-66-g6086d79",
 			"Rev": "6086d7927ec35315964d9fea46df6c04e6d697c1"
 		},
 		{
-			"ImportPath": "github.com/ehazlett/simplelog",
-			"Rev": "8e0c341182113b70168a8b9454c51e7944be5805"
+			"ImportPath": "github.com/dgryski/go-rc2",
+			"Rev": "fd90a5fcd260ebe709a689d0bdca2043afffabfa"
+		},
+		{
+			"ImportPath": "github.com/gorilla/context",
+			"Rev": "215affda49addc4c8ef7e2534915df2c8c35c6cd"
+		},
+		{
+			"ImportPath": "github.com/gorilla/mux",
+			"Rev": "ba336c9cfb43552c90de6cb2ceedd3271c747558"
 		}
 	]
 }
