@@ -20,6 +20,11 @@ func (a *API) sign(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	if !isCSRValid(&signRequest) {
+		http.Error(w, "invalid signing request", http.StatusBadRequest)
+		return
+	}
+
 	cert, err := signer.Sign(signRequest)
 	if err != nil {
 		http.Error(w, "error signing request", http.StatusInternalServerError)
