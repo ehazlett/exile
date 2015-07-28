@@ -7,6 +7,10 @@ import (
 	"github.com/cloudflare/cfssl/signer"
 )
 
+type CertificateResponse struct {
+	Certificate string `json:"certificate,omitempty"`
+}
+
 func (a *API) sign(w http.ResponseWriter, r *http.Request) {
 	var signRequest signer.SignRequest
 	if err := json.NewDecoder(r.Body).Decode(&signRequest); err != nil {
@@ -31,6 +35,12 @@ func (a *API) sign(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	w.WriteHeader(200)
-	w.Write([]byte(string(cert)))
+	certificate := &CertificateResponse{
+		Certificate: string(cert),
+	}
+
+	if err := json.NewEncoder(w).Encode(certificate); err != nil {
+		http.Error(w, "error encoding certificate", http.StatusInternalServerError)
+		return
+	}
 }
